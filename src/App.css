@@ -1,0 +1,88 @@
+@media (max-width: 767.98px) {
+  .mint_section {
+    width: 90%;
+  }
+}
+
+@media (min-width: 767.98px) {
+  .mint_section {
+    width: 50%;
+  }
+}
+
+.nft {
+  background: url(assets/images/background/bg-action-box1.png), linear-gradient(268.28deg, #2333DE -1.34%, #0ABE66 100%);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8px;
+  text-align: center;
+  /* margin-bottom: 50px; */
+  padding: 20px 0 20px;
+  /* height: 270px; */
+}
+
+.mint_counter {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.counter_form {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  /* gap: 1rem; */
+  border-radius: 3rem;
+}
+
+.mint_counter_btn,
+.mint_counter_btn1 {
+  width: 5rem;
+  height: 5rem;
+  padding: 0 !important;
+  font-size: 3.2rem !important;
+  border: 1px solid #ffffff !important;
+  background: none !important;
+  border-radius: 50% !important;
+  color: #ffffff !important;
+}
+
+.mint_quantity {
+  font-size: 3.2rem !important;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mint_button {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  color: #eceff1;
+}
+
+.mint_button:hover{
+  background: #53a524;
+}
+
+@media screen and (max-width: 768px) {
+  .mint_counter_btn,
+  .mint_counter_btn1 {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 24px !important;
+  }
+  .mint_button {
+    font-size: 20px;
+    padding: 10px 16px;
+  }
+}
