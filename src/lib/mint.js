@@ -1,7 +1,7 @@
 /* eslint-disable */
 import Web3 from 'web3'
 import { NFT_ABI } from './abi.js'
-import summary_input from './WoA_summary.txt'
+import summary_input from './leafers_summary.txt'
 import { pinJSONToIPFS } from './pinata.js'
 import axios from 'axios'
 
