@@ -17,16 +17,16 @@ import { BsClipboard } from 'react-icons/bs'
 import { setWallet } from '../actions/manager';
 import { hasEnoughEth, mint, getTotalMinted, getSignatureForMint, shortAddress, renameNFT, hasEnoughEthForRename, getSignatureForRename, getGroupId } from '../lib/mint';
 
-const PRICE = Number(process.env.REACT_APP_PRICE)
+const PRICE = 1
 const RENAME_PRICE = process.env.REACT_APP_RENAME_PRICE
 
-const NETWORK = 'Georli';
-const CHAIN_ID = 5
+const NETWORK = 'Polygon testnet';
+const CHAIN_ID = 80001
 // const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS
 // const NFT_ADDRESS = '0x211DE30c54d8A8C28D73fC3804ed47a96DE4C01c'  //CDC ropsten
-const NFT_ADDRESS = '0xc5dF25EC95A939BcBD9dDCE988BA8A07CA90d9C7' //LEAFER mubai
-const PARTNER_ID = '01GKNY4N7DJV60MTAYS916P0S0'
-const PRIVATE_KEY = '6296bf03015fab22d9d7d934b71eb11ee5355d6af45545be15bc437efd8ffc5b'
+const NFT_ADDRESS = '0xD806A18999E3CC834c737d0Ab934E86C19b1b8E1' //LEAFER mubai
+const PARTNER_ID = '01GSA44AKP00EFF4X2SP2DRM0E'
+const PRIVATE_KEY = '0x57466afb5491ee372b3b30d82ef7e7a0583c9e36aef0f02435bd164fe172b1d3'
 
 
 function Container8() {
@@ -213,7 +213,7 @@ function Container8() {
       let signature = await getSignatureForMint(wallet, quantity, groupId)
       const signedData = signSmartContractData({
         address: wallet, //user wallet
-        commodity: 'ETH',
+        commodity: 'MATIC',
         commodity_amount: (PRICE * quantity).toString(),
         pk_id: 'key1',
         sc_address: NFT_ADDRESS,//ropsten abc contract
@@ -223,7 +223,7 @@ function Container8() {
 
       const otherWidgetOptions = {
         partner_id: PARTNER_ID,
-        commodity: 'ETH:Ethereum-Goerli',
+        commodity: 'MATIC',
         container_id: 'wert-widget',
         click_id: uuidv4(), // unique id of purhase in your system
         origin: 'https://sandbox.wert.io', // this option needed only for this example to work
@@ -414,7 +414,7 @@ function Container8() {
               }
             </h4>
             <button className="mint_button" disabled={buying} onClick={handleBuy} >
-              {wallet ? `Mint using Cash / Fiat` : `Create Wallet Using Email Address`}
+              {wallet ? `Mint using Credit Card / Fiat` : `Create Wallet Using Email Address`}
             </button>
 
           </>

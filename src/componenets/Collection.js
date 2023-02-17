@@ -1,8 +1,8 @@
 const Collection = () => {
     return (
         <>
-            <div id="collection"></div>
-            <section className=" tf-collection ">
+            {/* <div id="collection"></div> */}
+            <section className=" tf-collection " id="collection">
                 <div className="tf-container">
                     <div className="row">
 

@@ -1497,6 +1497,7 @@
   background: url("../images/slider/bg-slider.png") center center no-repeat;
   background-size: cover;
   position: relative;
+  margin-top: 108px;
 }
 .tf-slider::after {
   content: "";
@@ -3108,3 +3109,7 @@
    
 }
 .bullet li { list-style:disc; list-style-position: inside;}
+
+.header {
+  position: fixed;
+}
