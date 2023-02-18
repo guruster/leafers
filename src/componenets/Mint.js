@@ -12,7 +12,7 @@ import WertWidget from '@wert-io/widget-initializer';
 import { signSmartContractData } from '@wert-io/widget-sc-signer';
 import { v4 as uuidv4 } from 'uuid';
 import Torus from '@toruslabs/torus-embed'
-import { BsClipboard } from 'react-icons/bs'
+import { BsClipboard } from 'react-icons/bs'  
 
 import { setWallet } from '../actions/manager';
 import { hasEnoughEth, mint, getTotalMinted, getSignatureForMint, shortAddress, renameNFT, hasEnoughEthForRename, getSignatureForRename, getGroupId } from '../lib/mint';
