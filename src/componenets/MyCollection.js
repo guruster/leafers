@@ -9,7 +9,7 @@ import '../index.css';
 import { getNFTsWithHighResImage } from '../actions/manager';
 import { getTokenIdsOf } from '../lib/mint'
 
-const NFT_ADDRESS = process.env.REACT_APP_NFT_ADDRESS
+const NFT_ADDRESS = '0xD806A18999E3CC834c737d0Ab934E86C19b1b8E1' //LEAFER mubai
 
 const NftItem = ({ nft }) => {
     return (
