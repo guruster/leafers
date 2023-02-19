@@ -12,7 +12,7 @@ import WertWidget from '@wert-io/widget-initializer';
 import { signSmartContractData } from '@wert-io/widget-sc-signer';
 import { v4 as uuidv4 } from 'uuid';
 import Torus from '@toruslabs/torus-embed'
-import { BsClipboard } from 'react-icons/bs'  
+import { BsClipboard } from 'react-icons/bs'
 
 import { setWallet } from '../actions/manager';
 import { hasEnoughEth, mint, getTotalMinted, getSignatureForMint, shortAddress, renameNFT, hasEnoughEthForRename, getSignatureForRename, getGroupId } from '../lib/mint';
@@ -391,7 +391,7 @@ function Container8() {
       {
         initWeb3 ?
           <>
-            <button className='mint_button'  disabled={minting} onClick={conMetamask} >
+            <button className='mint_button' disabled={minting} onClick={conMetamask} >
               Mint
             </button>
             {
@@ -402,17 +402,24 @@ function Container8() {
           </>
           :
           <>
-            <h4 style={{ textAlign: 'center', margin: '0px', marginTop: '10px', marginBottom: '10px', color: 'yellow', display: 'flex', alignItems: 'center', justifyContent: 'space-around', gap:'10px' }}>
-              {
-                wallet ? `${shortAddress(wallet)}` : `No Wallet Detected`
-              }
-              {
-                wallet &&
-                <div onClick={copy} >
-                  <BsClipboard />
-                </div>
-              }
-            </h4>
+            {
+              wallet ?
+                <h4 style={{ textAlign: 'center', margin: '0px', marginTop: '10px', marginBottom: '10px', color: 'yellow', display: 'flex', alignItems: 'center', justifyContent: 'space-around', gap: '10px' }}>
+                  {
+                    `${shortAddress(wallet)}`
+                  }
+                  <div onClick={copy} >
+                    <BsClipboard />
+                  </div>
+                </h4>
+                :
+                <h4 style={{ textAlign: 'center', margin: '0px', marginTop: '10px', marginBottom: '10px', color: 'red', display: 'flex', alignItems: 'center', justifyContent: 'space-around', gap: '10px' }}>
+                  {
+                   `No Wallet Detected`
+                  }
+                </h4>
+            }
+
             <button className="mint_button" disabled={buying} onClick={handleBuy} >
               {wallet ? `Mint using Credit Card / Fiat` : `Create Wallet Using Email Address`}
             </button>
